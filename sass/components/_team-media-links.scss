@@ -1,0 +1,46 @@
+.media-links {
+    @extend %no-marker;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.media-links__item {
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    margin-right: 10px;
+    justify-content: center;
+    background-color: $hero-text-color;
+    transition: background-color $transition-duration $transition-timing-function;
+    &:nth-child(4) {
+        margin-right: 0;
+    }
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+    }
+}
+
+.media-links__item:hover,
+.media-links__item:focus {
+    .media-links__icon {
+        fill: $hero-text-color;
+    }
+}
+
+.media-links__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media-links__icon {
+    fill: $icon-color;
+    transition: fill $transition-duration $transition-timing-function;
+}
