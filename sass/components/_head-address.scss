@@ -1,28 +1,64 @@
 .head-address {
     @extend %no-marker;
-    display: flex;
-    margin-left: auto;
-    align-items: center;
+    @media screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column-reverse;
+        position: absolute;
+        left: 40px;
+        bottom: 134px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        // margin-left: 84px;
+        // padding-right: 50px;
+    }
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        align-items: center;
+        margin-left: 305px;
+    }
 }
 
 .head-address__item:nth-child(1) {
-    margin-right: 50px;
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        margin-bottom: 10px;
+    }
+    @media screen and (min-width: $desktop) {
+        margin-right: 30px;
+    }
+}
+
+.head-address--larger-size {
+    @media screen and (max-width: 767px) {
+        font-size: 24px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+    }
+}
+
+.head-address--smaller-size {
+    @media screen and (max-width: 767px) {
+        font-size: 34px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        margin-bottom: 32px;
+    }
 }
 
 .head-address__link {
     display: flex;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: normal;
+    letter-spacing: 0.02em;
+    font-weight: 500;
     text-decoration: none;
-    font-size: 14px;
-    line-height: 24px;
     color: $primary-text-color;
     transition: color $transition-duration $transition-timing-function;
     &:hover,
     &:focus {
         color: $accent-color;
+    }
+    @media screen and (min-width: $tablet) {
+        font-size: 14px;
+        line-height: 1.14;
     }
 }
 
@@ -30,6 +66,9 @@
     fill: $primary-text-color;
     margin-right: 10px;
     transition: fill $transition-duration $transition-timing-function;
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
 }
 
 .head-address__link:hover,

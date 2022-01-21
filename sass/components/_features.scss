@@ -1,18 +1,46 @@
 .features {
     @extend %no-marker;
-    display: flex;
     flex-direction: row;
-    padding: 94px 0;
+    padding: 60px 0;
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @media screen and (min-width: $desktop) {
+        padding: 94px 0;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+
+.features__item {
+    margin-bottom: 30px;
+    @media screen and (min-width: $tablet) {
+        width: 50%;
+    }
+    @media screen and (min-width: $desktop) {
+        margin: 0;
+    }
 }
 
 .features__item:not(:last-child) {
-    margin-right: 30px;
-    padding: 0;
+    @media screen and (min-width: $desktop) {
+        margin-right: 30px;
+        padding: 0;
+    }
 }
 
 .features__icon {
+    background-color: #f5f4fa;
     display: block;
     margin-bottom: 30px;
+    padding: 25px 100px;
+    @media screen and (max-width: 767px) {
+        width: 450px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        width: 354px;
+    }
 }
 
 .features__title {
@@ -22,14 +50,12 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    width: 270px;
-    height: 16px;
-    margin-bottom: 10px;
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
 }
 
 .features__text {
-    width: 270px;
-    height: 75px;
     font-family: Roboto;
     font-weight: 700;
     font-style: normal;

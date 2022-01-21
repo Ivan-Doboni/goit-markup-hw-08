@@ -1,10 +1,24 @@
+.media-box {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .media-box__title {
     @extend %footer-text;
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
 }
 
 .media-box__list {
     @extend %no-marker;
     display: flex;
+    justify-content: center;
 }
 
 .media-box__item {
