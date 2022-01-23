@@ -44,11 +44,14 @@
     margin-right: 8px;
     margin-bottom: 4px;
     cursor: pointer;
+    @media screen and (min-width: $tablet) {
+        margin-right: 7px;
+    }
 }
 
 .checkbox__link {
     color: $accent-color;
-    @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $tablet) {
         margin-left: 4px;
     }
 }

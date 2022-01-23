@@ -1,52 +1,59 @@
-.footer-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    @media screen and (min-width: $desktop) {
-        align-items: flex-end;
-        flex-direction: row;
+    .footer-form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @media screen and (min-width: $desktop) {
+            align-items: flex-end;
+            flex-direction: row;
+        }
     }
-}
-
-.footer-form__box {
-    @media screen and (max-width: 1199px) {
-        margin-bottom: 20px;
+    
+    .footer-form__box {
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
+        @media screen and (max-width: 1199px) {
+            margin-bottom: 20px;
+        }
+        @media screen and (min-width: $desktop) {
+            margin-left: 108px;
+        }
     }
-    @media screen and (min-width: $desktop) {
-        margin-left: 108px;
+    
+    .media-box__title,
+    .footer-form__title {
+        @extend %footer-text;
+        @media screen and (max-width: 1199px) {
+            text-align: center;
+        }
     }
-}
-
-.footer-form__title {
-    @extend %footer-text;
-    @media screen and (max-width: 1199px) {
-        text-align: center;
+    
+    .footer-form__input {
+        width: 450px;
+        height: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        padding-left: 16px;
+        margin-right: 12px;
+        background-color: inherit;
+        color: $hero-text-color;
+        @media screen and (max-width: 479px) {
+            width: 100%;
+        }
+        @media screen and (min-width: $desktop) {
+            width: 358px;
+        }
     }
-}
-
-.footer-form__input {
-    width: 450px;
-    height: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    padding-left: 16px;
-    margin-right: 12px;
-    background-color: inherit;
-    color: $hero-text-color;
-    @media screen and (min-width: $desktop) {
-        width: 358px;
+    
+    .footer-form--subscribe {
+        display: flex;
+        align-items: center;
+        padding-left: 29px;
+        padding-right: 28px;
     }
-}
-
-.footer-form--subscribe {
-    display: flex;
-    align-items: center;
-    padding-left: 29px;
-    padding-right: 28px;
-}
-
-.footer-form__icon {
-    margin-left: 10px;
-}
+    
+    .footer-form__icon {
+        margin-left: 10px;
+    }

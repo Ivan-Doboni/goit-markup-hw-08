@@ -2,7 +2,10 @@
     @extend %no-marker;
     display: flex;
     justify-content: center;
-    padding-bottom: 30px;
+    padding-bottom: 24px;
+    @media screen and (min-width: $desktop) {
+        padding-bottom: 30px;
+    }
 }
 
 .media-links__item {

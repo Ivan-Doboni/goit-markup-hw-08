@@ -1,5 +1,10 @@
 .footer-address {
     @extend %no-marker;
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .address-box {

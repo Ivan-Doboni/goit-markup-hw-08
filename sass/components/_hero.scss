@@ -6,6 +6,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    width: 100%;
     max-width: 1600px;
     padding: 118px 0;
     text-align: center;
@@ -19,10 +20,10 @@
         }
     }
     @media screen and (min-width: $desktop) {
+        padding: 200px 0;
         background-image: $gradient-hero, url("../images/desktop/header/desk-header@1x.jpg");
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
             background-image: $gradient-hero, url("../images/desktop/header/desk-header@2x.jpg");
-            padding: 200px 0;
         }
     }
 }

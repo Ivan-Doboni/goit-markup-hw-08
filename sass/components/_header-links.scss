@@ -1,4 +1,5 @@
 .header-links {
+    width: 100%;
     @extend %no-marker;
     display: flex;
     position: absolute;
@@ -15,7 +16,7 @@
     letter-spacing: 0.02em;
     font-weight: 500;
     color: $accent-color;
-    &::after {
+    &:not(:last-child)::after {
         content: "";
         border: 1px solid rgba(33, 33, 33, 0.2);
         margin-left: 10px;

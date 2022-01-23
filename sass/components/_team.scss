@@ -1,59 +1,67 @@
-            .section-team {
-                background-color: rgba(245, 244, 250, 1);
-                padding-top: 60px;
-                @media screen and (min-width: $desktop) {
-                    padding-top: 94px;
-                }
-            }
-            
-            .team {
-                @extend %no-marker;
-                padding-bottom: 60px;
-                @media screen and (min-width: $tablet) {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                }
-                @media screen and (min-width: $desktop) {
-                    padding-bottom: 94px;
-                }
-            }
-            
-            .team__item {
-                // margin-right: 30px;
-                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-                border-radius: 0px 0px 4px 4px;
-                background-color: $hero-text-color;
-                text-align: center;
-                @media screen and (max-width: 767px) {
-                    width: 100%;
-                    &:not(:last-child) {
-                        margin-bottom: 30px;
-                    }
-                }
-                @media screen and (min-width: $tablet) and (max-width: 1199px) {
-                    &:nth-child(-n + 2) {
-                        margin-bottom: 30px;
-                    }
-                }
-            }
-            
-            .team__title {
-                color: $secondary-text-color;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 1.18;
-                padding: 30px 0 10px;
-                margin: 0;
-            }
-            
-            .team__text {
-                font-family: 'Roboto', sans-serif;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 16px;
-                letter-spacing: 0.03em;
-                color: $primary-text-color;
-                padding-bottom: 16px;
-                margin: 0;
-            }
+.section-team {
+    background-color: rgba(245, 244, 250, 1);
+    padding-top: 60px;
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+    }
+}
+
+.team {
+    @extend %no-marker;
+    @media screen and (max-width: 767px) {
+        padding-bottom: 60px;
+    }
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    @media screen and (min-width: $desktop) {
+        padding-bottom: 94px;
+    }
+}
+
+.team__item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: $hero-text-color;
+    text-align: center;
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        &:nth-child(-n + 2) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.team__pic {
+    display: block;
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
+}
+
+.team__title {
+    color: $secondary-text-color;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    padding: 30px 0 10px;
+    margin: 0;
+}
+
+.team__text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+    padding-bottom: 16px;
+    margin: 0;
+}
